@@ -1,0 +1,3 @@
+{% macro applyClass(class, data) %}
+  {{- class }}{% if data.classes %} {{ data.classes[class] }}{% endif -%}
+{% endmacro %}

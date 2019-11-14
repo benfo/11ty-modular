@@ -3,12 +3,9 @@
   {% set replacePattern = "[^\/]*$" %}
   {% set pagePath %}{{ page.inputPath | replaceregex(replacePattern, "") }}{% endset %}
   {% for module in collections.modules %}
-    {% set modulePath %}{{ module.inputPath | replaceregex(replacePattern, "") }}{% endset %}
-    {% set isCurrentPageModule = page.url in module.template.dataCache.page.filePathStem %}
-    {% if pagePath == modulePath %}
+    {% if group and module.data.group == group %}
       {% set moduleTemplate %}modules/{{ module.data.modular }}.njk{% endset %}
       {% include moduleTemplate %}
     {% endif %}
   {% endfor %}
-
 {% endblock %}

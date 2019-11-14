@@ -2,6 +2,7 @@
 layout: modular.njk
 title: Home
 tags: nav
+group: home
 ---
 
 # Hello world

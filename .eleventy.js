@@ -19,8 +19,8 @@ module.exports = function(eleventyConfig) {
    * Collections
    */
   eleventyConfig.addCollection("modules", function(collection) {
-    return collection.getAll().filter(function(item) {
-      return "modular" in item.data;
+    return collection.getFilteredByTag("module").filter(function(item) {
+      return item.fileSlug.startsWith("_");
     });
   });
 
