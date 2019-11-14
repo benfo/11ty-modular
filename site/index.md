@@ -1,5 +1,5 @@
 ---
-layout: modular.njk
+layout: component.njk
 title: Home
 tags: nav
 group: home

@@ -1,11 +1,9 @@
 ---
-title: hero 2 title
-modular: hero
 permalink: false
-tags: module
-hero_classes: is-dark
+title: In the middle
+subtitle: Of the day
+component: hero
+tags: component
+classes:
+  hero: is-dark
 ---
-
-# test hero 2
-
-Whatsup

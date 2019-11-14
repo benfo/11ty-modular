@@ -18,8 +18,8 @@ module.exports = function(eleventyConfig) {
   /**
    * Collections
    */
-  eleventyConfig.addCollection("modules", function(collection) {
-    return collection.getFilteredByTag("module").filter(function(item) {
+  eleventyConfig.addCollection("components", function(collection) {
+    return collection.getFilteredByTag("component").filter(function(item) {
       return item.fileSlug.startsWith("_");
     });
   });

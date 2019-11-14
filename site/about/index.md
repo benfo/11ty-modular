@@ -1,5 +1,5 @@
 ---
 title: About
-layout: modular.njk
+layout: component.njk
 tags: nav
 ---

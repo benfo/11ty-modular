@@ -1,12 +1,12 @@
 ---
 title: Ben Fourie
 subtitle: Developer. Adventurer.
-modular: hero
+component: hero
 permalink: false
-tags: module
+tags: component
 group: home
 classes:
-  hero: is-success has-text-centered is-fullheight
+  hero: is-success has-text-centered is-fullheight has-image
   title: is-2
   subtitle: is-4
 ---

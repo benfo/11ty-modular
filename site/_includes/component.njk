@@ -1,0 +1,11 @@
+{% extends "partials/base.njk" %}
+{% block content -%}
+  {% set replacePattern = "[^\/]*$" %}
+  {% set pagePath %}{{ page.inputPath | replaceregex(replacePattern, "") }}{% endset %}
+  {% for component in collections.components %}
+    {% if group and component.data.group == group %}
+      {% set componentTemplate %}components/{{ component.data.component }}.njk{% endset %}
+      {% include componentTemplate %}
+    {% endif %}
+  {% endfor %}
+{%- endblock %}
