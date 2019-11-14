@@ -1,0 +1,36 @@
+{% from "macros/classHelpers.njk" import applyClass as c %}
+{% set defaults = defaults.components.features.classes %}
+{% set overrides = component.data.classes %}
+
+<div class="{{ c("hero", defaults, overrides) }}">
+  <div class="hero-body">
+    <div class="container">
+      <header class="has-text-centered">
+        <h1 class="{{ c("title", defaults, overrides) }} is-spaced">{{ component.data.title }}</h1>
+        {% if component.data.subtitle -%}
+          <h2 class="{{ c("subtitle", defaults, overrides) }}">{{ component.data.subtitle }}</h2>
+        {%- endif %}
+      </header>
+
+      <div class="columns is-multiline features">
+        {% for feature in component.data.features -%}
+          <div class="{{ c("column", defaults, overrides) }}">
+            <div class="{{ c("card", defaults, overrides) }}">
+              {% if feature.icon %}
+                <div class="{{ c("card-image", defaults, overrides) }}">
+                  <i class="fa fa-fw fa-{{ feature.icon }}"></i>
+                </div>
+              {% endif %}
+              <div class="card-content">
+                <h1 class="title is-4">{{ feature.title }}</h1>
+                {% if feature.content -%}
+                  {{ feature.content | markdown | safe }}
+                {%- endif %}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

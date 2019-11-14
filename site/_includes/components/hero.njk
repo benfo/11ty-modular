@@ -1,10 +1,13 @@
-{% from "macros/classHelpers.njk" import applyClass %}
-<section class="{{ applyClass("hero", component.data) }}">
+{% from "macros/classHelpers.njk" import applyClass as c %}
+{% set defaults = defaults.components.features.classes %}
+{% set overrides = component.data.classes %}
+
+<section class="{{ c("hero", defaults, overrides) }}">
   <div class="hero-body">
     <div class="container">
-      <h1 class="{{ applyClass("title", component.data) }}">{{ component.data.title }}</h1>
+      <h1 class="{{ c("title", defaults, overrides) }}">{{ component.data.title }}</h1>
       {% if component.data.subtitle %}
-        <h2 class="{{ applyClass("subtitle", component.data) }}">{{ component.data.subtitle }}</h2>
+        <h2 class="{{ c("subtitle", defaults, overrides) }}">{{ component.data.subtitle }}</h2>
       {% endif %}
       {{ component.templateContent | safe }}
     </div>

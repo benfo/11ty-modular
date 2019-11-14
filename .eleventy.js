@@ -10,6 +10,14 @@ module.exports = function(eleventyConfig) {
     }
   );
 
+  eleventyConfig.addFilter("cssclass", (cssclass, defaults, overrides) => {
+    var classes = "";
+    if (overrides) classes = ` ${overrides[cssclass]}`;
+    else if (defaults) classes = ` ${defaults[cssclass]}`;
+    return `class="${cssclass}${classes}"`;
+  });
+
+  eleventyConfig.addFilter("markdown", require("./filters/markdown"));
   eleventyConfig.addFilter("replaceregex", (value, pattern, replaceValue) => {
     var r = new RegExp(pattern);
     return value.replace(r, replaceValue);
@@ -20,6 +28,9 @@ module.exports = function(eleventyConfig) {
    */
   eleventyConfig.addCollection("components", function(collection) {
     return collection.getFilteredByTag("component").filter(function(item) {
+      if (item.data.disabled && item.data.disabled == true) {
+        return false;
+      }
       return item.fileSlug.startsWith("_");
     });
   });

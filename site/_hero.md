@@ -5,6 +5,7 @@ component: hero
 permalink: false
 tags: component
 group: home
+disabled: false
 classes:
   hero: is-success has-text-centered is-fullheight has-image
   title: is-2

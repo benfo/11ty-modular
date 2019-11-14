@@ -1,0 +1,13 @@
+{
+  "components": {
+    "features": {
+      "classes": {
+        "title": "is-1 has-text-weight-bold",
+        "subtitle": "is-4",
+        "card": "has-text-centered",
+        "card-image": "has-text-centered",
+        "column": "is-4"
+      }
+    }
+  }
+}
