@@ -1,0 +1,11 @@
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">{{ module.data.title }}</h1>
+      {% if module.data.subtitle %}
+        <h2 class="subtitle">{{ module.data.subtitle }}</h2>
+      {% endif %}
+      {{ module.templateContent | safe }}
+    </div>
+  </div>
+</section>
