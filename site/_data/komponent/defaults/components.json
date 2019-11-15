@@ -5,13 +5,20 @@
       "subtitle": "is-4",
       "card": "has-text-centered",
       "card-image": "has-text-centered",
-      "column": "is-4"
+      "column": "is-4",
+      "columns": "is-multiline features",
+      "card-content": "has-text-centered",
+      "card-content-children": {
+        "title": "is-4 is-spaced",
+        "subtitle": "is-6"
+      }
     }
   },
   "hero": {
     "classes": {
-      "hero": "is-success has-text-centered is-small",
-      "title": "is-1"
+      "hero": "has-text-centered is-medium is-primary",
+      "title": "is-1 is-spaced",
+      "subtitle": "is-3"
     }
   }
 }

@@ -11,7 +11,7 @@
         {%- endif %}
       </header>
 
-      <div class="columns is-multiline features">
+      <div {{ cls("columns", classes) }}>
         {% for feature in component.data.features -%}
           <div {{ cls("column", classes) }}>
             <div {{ cls("card", classes) }}>
@@ -20,11 +20,17 @@
                   <i class="fa fa-fw fa-{{ feature.icon }}"></i>
                 </div>
               {% endif %}
-              <div class="card-content">
-                <h1 class="title is-4">{{ feature.title }}</h1>
+              <div {{ cls("card-content", classes) }}>
+                <h1 {{ cls("title", classes["card-content-children"]) }}>{{ feature.title }}</h1>
+                {%if feature.subtitle %}
+                  <h1 {{ cls("subtitle", classes["card-content-children"]) }}>{{ feature.subtitle }}</h1>
+                {% endif %}
                 {% if feature.content -%}
                   {{ feature.content | markdown | safe }}
                 {%- endif %}
+                {%if feature.link %}
+                  <a href="{{ feature.link | url }}">{{ feature.link_text }}</a>
+                {% endif %}
               </div>
             </div>
           </div>
