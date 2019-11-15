@@ -1,4 +1,5 @@
 {% extends "partials/base.njk" %}
+
 {% block content -%}
   {% set replacePattern = "[^\/]*$" %}
   {% set pagePath %}{{ page.inputPath | replaceregex(replacePattern, "") }}{% endset %}

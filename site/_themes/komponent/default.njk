@@ -1,11 +1,12 @@
 {% extends "partials/base.njk" %}
-
 {% block content %}
-  <div class="section">
-    <div class="container">
-      <div class="content">
-        {{ content | safe }}
+  {% if (content | length) > 0 %}
+    <div class="section">
+      <div class="container">
+        <div class="content">
+          {{ content | safe }}
+        </div>
       </div>
     </div>
-  </div>
+  {% endif %}
 {% endblock %}

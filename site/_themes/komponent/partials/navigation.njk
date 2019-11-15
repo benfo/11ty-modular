@@ -1,4 +1,4 @@
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav {{ cls("navbar", classes) }} role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
       <a class="navbar-item" href="{{ "/" | url }}">
@@ -15,9 +15,7 @@
     <div id="headerNavbar" class="navbar-menu">
       <div class="navbar-end">
         {% for nav in collections.nav %}
-          <div class="navbar-item">
-            <a class="navbar-item" href="{{ nav.url | url }}">{{ nav.data.title }}</a>
-          </div>
+          <a class="navbar-item" href="{{ nav.url | url }}">{{ nav.data.title }}</a>
         {% endfor %}
       </div>
     </div>

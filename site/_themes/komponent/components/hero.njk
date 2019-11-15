@@ -1,6 +1,5 @@
 {% from "macros/styling.njk" import cls %}
 {% set classes = component.data.classes | defaultsDeep(defaults.components.hero.classes) %}
-
 <section {{ cls("hero", classes) }}>
   <div class="hero-body">
     <div class="container">

@@ -1,3 +1,4 @@
+{% from "macros/styling.njk" import cls %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,10 +22,27 @@
     {% block header %}
       <header>
         {% block header_nav %}
-          {% include "partials/navigation.njk" %}
+          {% if hero %}
+            <section {{ cls("hero", classes) }}>
+              <div class="hero-head">
+                {% include "partials/navigation.njk" %}
+              </div>
+              <div class="hero-body">
+                <div class="container has-text-centered">
+                  <div class="column is-6 is-offset-3">
+                    <h1 class="title">{{ hero.title }}</h1>
+                    <h2 class="subtitle">{{ hero.subtitle }}</h2>
+                  </div>
+                </div>
+              </div>
+            </section>
+          {% else %}
+            {% include "partials/navigation.njk" %}
+          {% endif %}
         {% endblock header_nav %}
       </header>
     {% endblock header %}
+
     {% block content %}{% endblock %}
 
     {% set jsmain %}

@@ -7,7 +7,7 @@ tags: component
 group: home
 disabled: false
 classes:
-  hero: is-success has-text-centered is-fullheight has-image
+  hero: is-success has-text-centered
   title: is-2
   subtitle: is-4
 ---
