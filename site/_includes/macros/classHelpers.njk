@@ -1,9 +1,0 @@
-{% macro applyClass(class, defaults, overrides) %}
-  {%- if overrides and overrides[class] %}
-    {{ class + " " + overrides[class] }}
-  {% elseif defaults and defaults[class] %}
-    {{ class + " " + defaults[class] }}
-  {% else %}
-    {{ class }}
-  {% endif %}
-{% endmacro -%}

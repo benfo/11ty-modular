@@ -1,0 +1,17 @@
+{
+  "features": {
+    "classes": {
+      "title": "is-1 has-text-weight-bold is-spaced",
+      "subtitle": "is-4",
+      "card": "has-text-centered",
+      "card-image": "has-text-centered",
+      "column": "is-4"
+    }
+  },
+  "hero": {
+    "classes": {
+      "hero": "is-success has-text-centered is-small",
+      "title": "is-1"
+    }
+  }
+}

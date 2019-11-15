@@ -1,7 +1,7 @@
 ---
 permalink: false
-title: In the middle
-subtitle: Of the day
+title: Hero
+subtitle: In all of us
 component: hero
 tags: component
 classes:
