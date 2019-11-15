@@ -1,4 +1,4 @@
 {
-  "hero": "is-dark",
-  "navbar": "is-dark"
+  "hero": "is-primary",
+  "navbar": "is-primary"
 }

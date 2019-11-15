@@ -7,6 +7,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("defaultsDeep", require("./filters/defaultsDeep"));
   eleventyConfig.addFilter("toClass", require("./filters/toClass"));
   eleventyConfig.addFilter("replaceregex", require("./filters/replaceRegex"));
+  eleventyConfig.addFilter("renderSass", require("./filters/renderSass"));
+  eleventyConfig.addFilter("themeurl", require("./filters/themeurl"));
 
   /**
    * Collections
@@ -15,4 +17,11 @@ module.exports = function(eleventyConfig) {
     "components",
     require("./collections/components")
   );
+
+  /**
+   * Static content
+   */
+  eleventyConfig.addPassthroughCopy({
+    "site/_themes/komponent/static": "/themes/komponent/"
+  });
 };

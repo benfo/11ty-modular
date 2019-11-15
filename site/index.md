@@ -7,5 +7,5 @@ hero:
   title: Launching soon...
   subtitle: Delightful bits delivered to your brain.
 classes:
-  hero: has-image is-dark is-fullheight
+  hero: has-image is-primary is-fullheight
 ---

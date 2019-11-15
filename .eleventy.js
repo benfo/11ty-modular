@@ -3,13 +3,7 @@ module.exports = function(eleventyConfig) {
   /**
    * Register the "komponent" plugin
    */
-
   eleventyConfig.addPlugin(require(`./plugins/${theme}`));
-
-  /**
-   * Static content
-   */
-  eleventyConfig.addPassthroughCopy({ "site/static": "/" });
 
   return {
     dir: {
