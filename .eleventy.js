@@ -1,9 +1,10 @@
-var crypto = require("crypto");
 module.exports = function(eleventyConfig) {
+  const theme = "komponent";
   /**
    * Register the "komponent" plugin
    */
-  eleventyConfig.addPlugin(require("./plugins/komponent"));
+
+  eleventyConfig.addPlugin(require(`./plugins/${theme}`));
 
   /**
    * Static content
@@ -13,7 +14,9 @@ module.exports = function(eleventyConfig) {
   return {
     dir: {
       input: "site",
-      output: "dist"
+      output: "dist",
+      includes: `_themes/${theme}`,
+      data: `_data/${theme}`
     }
   };
 };

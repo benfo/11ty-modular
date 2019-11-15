@@ -11,5 +11,8 @@ module.exports = function(eleventyConfig) {
   /**
    * Collections
    */
-  eleventyConfig.addCollection("components", require("./collections/components");
+  eleventyConfig.addCollection(
+    "components",
+    require("./collections/components")
+  );
 };
