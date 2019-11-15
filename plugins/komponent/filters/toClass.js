@@ -1,5 +1,5 @@
 const _ = require("lodash");
-module.exports = function(cssClass, cssClasses) {
+module.exports = (cssClass, cssClasses) => {
   if (_.isString(cssClasses)) {
     return _.join([cssClass, cssClasses], " ");
   }
