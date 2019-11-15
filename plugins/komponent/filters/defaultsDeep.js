@@ -1,4 +1,5 @@
 const _ = require("lodash")();
 module.exports = function(object, ...sources) {
-  return _.defaultsDeep(object, ...sources);
+  let result = JSON.stringify(_.defaultsDeep(object, ...sources));
+  return JSON.parse(result);
 };
